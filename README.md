@@ -16,9 +16,9 @@ There is no HMR or LiveReload, by design. I just need a simple setup.
 2. Remove the `.git` directory with `rm -rf .git` from the project root
 3. Add your own `git` history with `git init` and then you can associate your own remote with `git remote add origin <remote url>`
 
-## Included Scripts
+## Included scripts
 
 - `build` - runs `webpack` which results in a build to the `./build` directory
 - `watch` - runs webpack with the `--watch` flag
-- `serve` - runs `json-server` with the `--watch` flag on port `3030` using `db.json` for data and serving static files from `./build`
+- `serve` - runs `json-server` using `db.json`
 - `dev` - runs both `watch` and `serve` for development
