@@ -19,6 +19,6 @@ There is no HMR or LiveReload, by design. I just need a simple setup.
 ## Included Scripts
 
 - `build` - runs `webpack` which results in a build to the `./build` directory
-- `watch` - runs webpack wioth the `--watch` flag
+- `watch` - runs webpack with the `--watch` flag
 - `serve` - runs `json-server` with the `--watch` flag on port `3030` using `db.json` for data and serving static files from `./build`
 - `dev` - runs both `watch` and `serve` for development
