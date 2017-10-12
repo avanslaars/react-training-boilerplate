@@ -9,3 +9,9 @@ There are a handful of scripts in `package.json` and that is enough to build and
 There is no HMR or LiveReload, by design. I just need a simple setup.
 
 **If you have something to add that is useful to many people and keeps this simple, I'm happy to accept contributions.**
+
+## Starting a new project
+
+1. Clone this repository with `git clone git@github.com:avanslaars/react-training-boilerplate.git`
+2. Remove the `.git` directory with `rm -rf .git` from the project root
+3. Add your own `git` history with `git init` and then you can associate your own remote with `git remote add origin <remote url>`
