@@ -27,6 +27,8 @@ There is no HMR or LiveReload, by design. I just need a simple setup.
 
 With docker installed, you can simply run `docker-compose up`.
 
+Alternatively, you can run it with: `docker-compose run --service-ports --rm app` which will do a one-off run, mapping the ports and deleting the container when you exit it.
+
 This will build and run the image for this application. It will mount the root volume of this project, start the `json-server`, and start webpack in watch mode to build the client files.
 
 Access the application in a browser through port `4200` (mapping can be changed in `docker-compose.yml`)

@@ -1,9 +1,11 @@
-app:
-  build: .
-  ports:
-    - 4200:3030
-  volumes:
-    - .:/app
-  command: npm run dev
-  environment:
-    - NODE_ENV=development
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - 4200:3030
+    volumes:
+      - .:/app
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
