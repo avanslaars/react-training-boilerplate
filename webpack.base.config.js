@@ -8,7 +8,6 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-  mode: "development",
   entry: "./src/index.js",
   output: {
     path: path.join(__dirname, "build"),
@@ -23,17 +22,6 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  },
-  devtool: "sourcemap",
-  devServer: {
-    contentBase: "./build",
-    port: 9000,
-    proxy: {
-      "/api": {
-        target: "http://localhost:3030",
-        secure: false
-      }
-    }
   },
   plugins: [HtmlWebpackPluginConfig]
 }
