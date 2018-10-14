@@ -1,29 +1,39 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './src/index.html',
-  filename: 'index.html',
-  inject: 'body'
+  template: "./src/index.html",
+  filename: "index.html",
+  inject: "body"
 })
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
+  mode: "development",
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'app.bundle.js'
+    path: path.join(__dirname, "build"),
+    filename: "app.bundle.js"
   },
   module: {
     rules: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
         exclude: /node_modules/
       }
     ]
   },
-  devtool: 'sourcemap',
+  devtool: "sourcemap",
+  devServer: {
+    contentBase: "./build",
+    port: 9000,
+    proxy: {
+      "/api": {
+        target: "http://localhost:3030",
+        secure: false
+      }
+    }
+  },
   plugins: [HtmlWebpackPluginConfig]
 }
