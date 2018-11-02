@@ -1,8 +1,9 @@
-import React, { Component } from "react"
-import { hot } from "react-hot-loader"
-import "./styles.css"
+import React from 'react'
+import { hot } from 'react-hot-loader'
+import '@babel/polyfill'
+import './styles.css'
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>

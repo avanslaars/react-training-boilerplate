@@ -1,15 +1,15 @@
 module.exports = function(wallaby) {
   return {
     files: [
-      "src/**/*.js",
-      "package.json",
-      { pattern: "src/**/*.spec.js", ignore: true }
+      'src/**/*.js',
+      'package.json',
+      { pattern: 'src/**/*.spec.js', ignore: true }
     ],
-    tests: ["src/**/*.spec.js"],
-    testFramework: "jest",
+    tests: ['src/**/*.spec.js'],
+    testFramework: 'jest',
     env: {
-      type: "node",
-      runner: "node"
+      type: 'node',
+      runner: 'node'
     }
   }
 }
