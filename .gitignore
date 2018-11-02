@@ -9,6 +9,7 @@ yarn-error.log*
 .env
 
 build
+coverage
 
 .DS_Store
 .env.local
