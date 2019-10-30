@@ -3,6 +3,8 @@ import { hot } from 'react-hot-loader'
 import '@babel/polyfill'
 import './styles.css'
 
+// Hello! Hope you're having a wonderful day! =)
+
 class App extends React.Component {
   render() {
     return (
