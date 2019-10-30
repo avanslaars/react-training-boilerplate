@@ -8,6 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>This is the app.</h1>
+        <h2>Another header has now been added to this file in ordfer to practice Git.</h2>
       </div>
     )
   }
